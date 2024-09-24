@@ -9,4 +9,4 @@ WORKDIR /app
 COPY ./* ./
 EXPOSE 5173
 RUN pnpm install
-CMD pnpm run dev
+CMD pnpm run dev --host 0.0.0.0
