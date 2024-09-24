@@ -8,7 +8,7 @@ function App() {
 
       // send codeResponse to the server
       const tokenResponse = await axios.get(
-        `http://localhost:8080/auth/google/callback?code=${codeResponse.code}`
+        `${import.meta.env.API_URL}/auth/google/callback?code=${codeResponse.code}`,
       );
 
       console.log("tokenResponse", tokenResponse);
