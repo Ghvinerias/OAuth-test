@@ -7,6 +7,6 @@ WORKDIR /app
 
 # Install dependencies based on the preferred package manager
 COPY ./* ./
-
+EXPOSE 5173
 RUN pnpm install
 CMD pnpm run dev

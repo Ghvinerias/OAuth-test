@@ -4,8 +4,8 @@ FROM golang:1.23 AS build-stage
 WORKDIR /app
 
 COPY . .
-
 RUN go mod download
+EXPOSE 8080
 
 CMD go run main.go utils.go
 # RUN CGO_ENABLED=0 GOOS=linux go build -o /secret-santa
